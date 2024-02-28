@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
@@ -12,7 +12,7 @@
 
 <body>
   <header>
-    <h2 class="text-6xl">Hunting Phone</h2>
+    <h2 class="text-4xl text-center font-bold text-lime-900">Hunting Phone</h2>
   </header>
   <main class="container mx-auto mt-8">
     <!-- search -->
@@ -24,7 +24,7 @@
       <!-- <input id="search-field2" type="text" placeholder="Search" class="input input-bordered w-full max-w-xs" />
       <button onclick="handleButton2()" class="btn btn-accent">Search 2</button> -->
     </section>
-    
+
 
     <!-- search result -->
     <section>
@@ -33,12 +33,30 @@
         <span class="loading loading-spinner text-primary loading-lg"></span>
       </div>
 
-      <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" >
+      <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
       </div>
     </section>
-    <div id="show-all-search" class="hidden">
-      <button  class="btn btn-accent">Show All</button>
+    <div id="show-all-search" class="hidden text-center my-8">
+      <button onclick="handleShowAll()" class="btn btn-accent">Show All</button>
     </div>
+
+
+    <!-- show modal details-->
+    <!-- Open the modal using ID.showModal() method -->
+    <dialog id="show_modal_details" class="modal modal-bottom sm:modal-middle">
+      <div class="modal-box">
+        <h3 id="show-detail-phone-name" class="font-bold text-4xl"></h3>
+        <div id="show-details-container">
+
+        </div>
+        <div class="modal-action">
+          <form method="dialog">
+            <!-- if there is a button in form, it will close the modal -->
+            <button class="btn">Close</button>
+          </form>
+        </div>
+      </div>
+    </dialog>
   </main>
   <footer>
 
@@ -49,3 +67,7 @@
 </body>
 
 </html>
+
+
+
+<img class="mx-auto" src="" alt="">
