@@ -14,21 +14,31 @@
   <header>
     <h2 class="text-6xl">Hunting Phone</h2>
   </header>
-  <main class="container mx-auto">
+  <main class="container mx-auto mt-8">
+    <!-- search -->
+    <section class="bg-gray-100 p-4 m-4">
+      <input id="search-field" type="text" placeholder="Search..." class="input input-bordered w-full max-w-xs" />
+      <button onclick="handleButton()" class="btn btn-accent">Search</button>
+
+      <!-- another search button -->
+      <!-- <input id="search-field2" type="text" placeholder="Search" class="input input-bordered w-full max-w-xs" />
+      <button onclick="handleButton2()" class="btn btn-accent">Search 2</button> -->
+    </section>
+    
+
+    <!-- search result -->
     <section>
+      <!-- spinner/loader -->
+      <div id="loadingSpinner" class="text-center my-40 hidden">
+        <span class="loading loading-spinner text-primary loading-lg"></span>
+      </div>
+
       <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" >
-        <!-- <div class="card w-96 bg-gray-200 shadow-xl">
-          <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
-          <div class="card-body">
-            <h2 class="card-title">Shoes!</h2>
-            <p>If a dog chews shoes whose shoes does he choose?</p>
-            <div class="card-actions justify-end">
-              <button class="btn btn-primary">Buy Now</button>
-            </div>
-          </div>
-        </div> -->
       </div>
     </section>
+    <div id="show-all-search" class="hidden">
+      <button  class="btn btn-accent">Show All</button>
+    </div>
   </main>
   <footer>
 
